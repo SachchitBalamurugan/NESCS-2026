@@ -1,0 +1,1015 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
+    color: #e7e7e7;
+    min-height: 100vh;
+    line-height: 1.5;
+
+}
+
+/* Gradient Image Styling */
+.image-gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.layer-blur {
+    height: 0;
+    width: 30rem;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    box-shadow: 0 0 700px 15px white;
+    rotate: -30deg;
+    z-index: -1;
+}
+
+/* Container Styling */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+/* Header Styling */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+nav {
+    display: flex;
+    gap: 3rem;
+    margin-left: -5%;
+
+}
+
+nav a {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    transition: color 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+    z-index: 999;
+
+}
+
+nav a:hover {
+    color: #a7a7a7;
+}
+
+.btn-signin {
+   background-color: #a7a7a7;
+   color: black;
+   padding: 0.8rem 2rem;
+   border-radius: 50px;
+   border: none;
+   font-size: 1rem;
+   font-weight: 500;
+   transition: background-color 0.2s ease;
+   cursor: pointer;
+   z-index: 999;
+
+}
+
+.btn-signin:hover {
+    background-color: white;
+}
+
+/* Main Section Styling */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(90vh - 6rem);
+}
+
+.content {
+    max-width: 40rem;
+    margin-left: 10%;
+    z-index: 999;
+}
+
+.tag-box {
+    position: relative;
+    width: 18rem;
+    height: 2.5rem;
+    border-radius: 50px;
+    background: linear-gradient(to right, #656565, #7f42a7, #6600c5, #5500a0, #757575, #656565 );
+    background-size: 200%;
+    animation: animateGradient 2.5s linear infinite;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes animateGradient {
+    to {
+        background-position: 200%;
+    }
+}
+
+.tag-box .tag {
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.tag-box:hover .tag {
+    color: #5300a0;
+}
+
+.content h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    margin: 2rem 0;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgba(128, 128, 128, 0.418);
+}
+
+.description {
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+    max-width: 35rem;
+    color: gray;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.btn-get-started {
+    text-decoration: none;
+    border: 1px solid #2a2a2a;
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    transition: background-color 0.2s ease;
+}
+
+.btn-get-started:hover {
+    background-color: #1a1a1a;
+}
+
+.btn-signing-main {
+    text-decoration: none;
+    background-color: lightgray;
+    color: black;
+    padding: 0.6rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    transition: background-color 0.2s ease;
+}
+
+
+.btn-get-started:hover {
+    background-color: gray;
+}
+
+.robot-3d {
+    position: absolute;
+    top: 0;
+    right: -30%;
+}
+
+.robot-3d4 {
+    position: absolute;
+    top: 0;
+    right: -30%;
+    width: 150%;  /* increase this value */
+}
+
+/* tablet responsive */
+@media (max-width: 1300px) {
+    header {
+        padding: 1rem 0.5rem;
+    }
+
+    .content {
+        margin-top: 85%;
+    }
+
+    .robot-3d {
+        scale: 0.8;
+        top: -5%;
+        right: 25%;
+    }
+    
+}
+
+/* mobile responsive */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 0.1rem;
+    }
+
+    nav {
+        display: none;
+
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .btn-signin {
+        padding: 0.6rem 1.5rem;
+    }
+    
+    .content {
+        margin-top: 25rem;
+    }
+
+    .robot-3d {
+        scale: 0.5;
+        top: -15%;
+        right: 55%;
+    }
+
+    .content {
+        max-width: 30rem;
+        margin-left: 10%;
+    }
+
+    .tag-box {
+        width: 12rem;
+    }
+
+    .content h1 {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .btn-get-started {
+        font-size: 0.8rem;
+        padding: 0.8rem 1.2rem;
+    }
+
+    .btn-signing-main {
+        font-size: 0.8rem;
+        padding: 0.8rem 2rem;
+    }
+}
+
+/* ===================== */
+/*  Bottom Landing Styles */
+/* ===================== */
+
+/* Featured Games Section */
+.games-featured {
+    margin-top: 8rem;
+    text-align: center;
+}
+
+.games-featured h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(150, 0, 255, 0.5);
+}
+
+.games-list {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.games-list span {
+    padding: 0.7rem 2rem;
+    background: rgba(40, 0, 65, 0.7);
+    border: 1px solid #4e007a;
+    border-radius: 50px;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px rgba(140, 0, 255, 0.4);
+}
+
+.games-list span:hover {
+    background: rgba(100, 0, 180, 0.9);
+    box-shadow: 0 0 20px rgba(150, 0, 255, 0.8);
+}
+
+
+/* Countdown */
+.countdown {
+    position: relative; /* needed for pseudo-element positioning */
+    text-align: center;
+    font-size: 4rem;
+    margin: 5rem 0;
+    font-weight: 600;
+    color: #b97aff;
+}
+
+/* Glow layer behind the text */
+.countdown::before {
+    content: attr(data-text); /* replicate the text */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #b97aff;
+    filter: blur(10px);
+    opacity: 0.6;
+    z-index: -1; /* behind the text */
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+/* Optional slow pulsing animation */
+.countdown::before {
+    animation: glowPulse 3s infinite alternate;
+}
+
+@keyframes glowPulse {
+    from {
+        filter: blur(8px);
+        opacity: 0.4;
+    }
+    to {
+        filter: blur(12px);
+        opacity: 0.7;
+    }
+}
+
+
+/* Info Cards Section */
+.info-section {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 5rem auto 10rem;
+    padding-bottom: 5rem;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    background: rgba(20, 20, 20, 0.85);
+    padding: 2rem;
+    width: 18rem;
+    border-radius: 20px;
+    border: 1px solid rgba(140, 0, 255, 0.2);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    transition: 0.3s ease;
+    box-shadow: 0 0 15px rgba(150, 0, 255, 0.2);
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(150, 0, 255, 0.6);
+    border-color: rgba(160, 80, 255, 0.7);
+}
+
+.info-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #d7baff;
+}
+
+.info-card p {
+    font-size: 1rem;
+    color: #aaa;
+    line-height: 1.4;
+}
+
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+    .games-list {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .info-section {
+        margin-top: 3rem;
+    }
+
+    .info-card {
+        width: 90%;
+    }
+}
+
+/* HERO BACKGROUND IMAGE */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Container that holds blur behind text */
+.hero-blur-wrapper {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140%;
+    height: 140%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+/* Container that holds circle behind text */
+.hero-circle-wrapper {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140%;
+    height: 140%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Actual blur image styling */
+.hero-blur-img {
+    width: 100%;
+    height: auto;
+    opacity: 0.99;
+    filter: blur(50px);
+}
+/* CAROUSEL STYLES */
+
+.carousel-container{
+    position: relative;
+    margin-top: 10px;
+    /* background-color: red; */
+}
+.carousel-list{
+    display: flex;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.carousel-item{
+    min-width: 100%;
+    max-height: 500px;
+    transition: transform 1s;
+    /* transform: translateX(-0%); */
+}
+.carousel-item img{
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-btn-Container{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.carousel-btn{
+    padding: 40px 15px;
+    font-size: 30px;
+    border:none;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.carousel-container {
+    position: relative;
+    margin-top: 10px;
+    overflow: hidden; /* important to clip the fade edges */
+}
+.carousel-container::before,
+.carousel-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* ::before will handle left & top fades */
+.carousel-container::before {
+    background:
+        linear-gradient(to right, black, rgba(0,0,0,0) 80px),   /* left fade */
+        linear-gradient(to bottom, black, rgba(0,0,0,0) 80px);  /* top fade */
+}
+
+/* ::after will handle right & bottom fades */
+.carousel-container::after {
+    background:
+        linear-gradient(to left, black, rgba(0,0,0,0) 80px),    /* right fade */
+        linear-gradient(to top, black, rgba(0,0,0,0) 80px);     /* bottom fade */
+}
+
+
+.games-featured h2 {
+    font-weight: 300; /* makes text thin */
+}
+
+/* Team Rosters Section */
+.team-rosters h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    text-shadow: 0 0 10px rgba(150, 0, 255, 0.5);
+}
+
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    padding-bottom: 5rem;
+}
+
+/* Team Card Styling */
+.team-card {
+    background: rgba(20, 20, 20, 0.85);
+    border: 1px solid rgba(140, 0, 255, 0.3);
+    border-radius: 20px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px rgba(150, 0, 255, 0.2);
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(150, 0, 255, 0.6);
+    border-color: rgba(160, 80, 255, 0.7);
+}
+
+.team-logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+/* Players Grid */
+.players {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.player-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #7f42a7;
+    object-fit: cover;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.player-avatar:hover {
+    transform: scale(1.2);
+    border-color: #d7baff;
+}
+
+.player p {
+    font-size: 0.9rem;
+    text-align: center;
+    color: #e7e7e7;
+}
+
+.player span {
+    color: #a7a7a7;
+    font-size: 0.8rem;
+}
+
+
+
+
+
+.team-stats h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin: 3rem 0;
+    text-shadow: 0 0 10px rgba(150, 0, 255, 0.5);
+}
+
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding-bottom: 5rem;
+}
+
+.stats-card {
+    background: rgba(20, 20, 20, 0.85);
+    border: 1px solid rgba(140, 0, 255, 0.3);
+    border-radius: 20px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px rgba(150, 0, 255, 0.2);
+}
+
+.stats-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(150, 0, 255, 0.6);
+    border-color: rgba(160, 80, 255, 0.7);
+}
+
+.stats-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #d7baff;
+}
+
+.stats-card p {
+    font-size: 1rem;
+    color: #aaa;
+    line-height: 1.4;
+}
+
+
+
+
+
+
+
+
+
+
+.teams-bg-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: auto;
+    opacity: 0.8; /* subtle blend into background */
+    z-index: -1; /* behind the text */
+    pointer-events: none;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+.team-graphs {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.graphs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.graph-card {
+    background: rgba(0,0,0,0.6);
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    width: 500px;       /* increased width */
+    max-width: 90vw;    /* responsive on small screens */
+}
+
+.graph-card canvas {
+    width: 100% !important;
+    height: 400px !important;  /* increased height */
+}
+
+.esports-section {
+    width: 100%;
+    color: #fff;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 5rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filters .search {
+    background: #111;
+    color: #fff;
+    border: 1px solid #333;
+    padding: 0.5rem 1rem;
+    width: 200px;
+}
+
+.filters .filter {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.filters .filter span {
+    color: #fff;
+    font-weight: 600;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(44, 44, 44);
+}
+
+.table-header, .table-row {
+    display: grid;
+    grid-template-columns: 50px 2fr 1fr 1.5fr 1.5fr 2fr;
+    padding: 0.75rem 1rem;
+    align-items: center;
+}
+
+.table-header {
+    border-bottom: 2px solid #333;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.table-row {
+    border-bottom: 1px solid #333;
+    transition: background 0.2s;
+}
+
+.table-row:hover {
+    background: #222;
+}
+
+.col.rank {
+    text-align: center;
+}
+
+.col.prize {
+    color: #00ffcc;
+    font-weight: 600;
+}
+
+.col.viewers {
+    color: #ff6699;
+}
+
+.main-content {
+    display: flex;
+    gap: 30px; /* space between left and right */
+}
+
+/* Left table takes more space */
+.left-table {
+    flex: 2;
+}
+
+/* Right sidebar stacked */
+.right-sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* space between top and bottom div */
+}
+
+.upcoming-matches, .sidebar-bottom {
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.upcoming-matches .table-container {
+    margin-top: 10px;
+}
+
+/* Adjust table columns */
+.table-header .col, .table-row .col {
+    padding: 8px;
+}
+
+.table-header .team1, .table-row .team1 {
+    width: 30%;
+}
+
+.table-header .team2, .table-row .team2 {
+    width: 30%;
+}
+
+.table-header .datetime, .table-row .datetime {
+    width: 40%;
+}
+
+.upcoming-matches {
+    padding: 0; /* remove extra padding */
+    margin: 0;
+    font-size: 0.9rem; /* make smaller */
+}
+
+.upcoming-matches h3 {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}.matches-table {
+    width: 100%;
+    border-collapse: separate; /* allow rounded corners */
+    border-spacing: 0;          /* remove gaps between cells */
+    font-size: 0.9rem;
+    border-radius: 10px;        /* rounded corners for table */
+    overflow: hidden;           /* clips the corners of inner cells */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* optional subtle shadow */
+}
+
+.matches-table th, .matches-table td {
+    text-align: left;
+    padding: 10px 12px;        /* increased padding for spacing */
+}
+
+.matches-table th {
+    font-weight: 600;
+    background-color: #2c2c2c; /* header background */
+    color: #fff;               /* header text color */
+}
+
+.matches-table tr {
+    background-color: #3a3a3a; /* row background */
+    color: #fff;               /* row text color */
+    border-bottom: 1px solid #555; /* row separator */
+}
+
+/* subtle hover effect */
+.matches-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.upcoming-matches-header {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between logo and heading */
+    margin-bottom: 8px;
+}
+
+.logo-box {
+    width: 40px;
+    height: 40px;
+    background-color: #2c2c2c; /* box background */
+    border-radius: 8px;         /* rounded corners */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.logo-box img {
+    width: 24px;  /* adjust logo size */
+    height: 24px;
+    object-fit: contain;
+}
+
+
+.ad-space {
+    margin-top: 15px;
+    height: 150px;           /* adjust height as needed */
+    border-radius: 8px;      /* rounded corners */
+    border: 2px dashed #ccc; /* optional placeholder style */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Example placeholder text */
+.ad-space::before {
+    content: "Ad Space";
+}
+
+
+.hero {
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 150vh;
+    overflow: hidden;
+}
+
+.hero-blur2 {
+    position: absolute;
+    width: 100%;
+    top: -15%;
+}
+
+.hero-rings {
+    position: absolute;
+    height: 90%;
+    top: 90px;
+    opacity: 0.4;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 10%;
+    font-size: 50px;
+    max-width: 1000px;
+    text-align: center;
+    color: white;
+}
+
+.hero h3 {
+    position: absolute;
+    top: 25%;
+    font-size: 22px;
+    max-width: 700px;
+    text-align: center;
+    color: white;
+    font-weight: 300;
+}
+.hero-image-box {
+    margin-top: 250px;
+    position: relative;
+    width: 1000px;
+    height: 550px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background: linear-gradient(to right, #00aaa7, #7f42a7, #6600c5, #1f2b9c, #2a46ff, #00aaa7);
+    background-size: 300%;
+    animation: animateGradient 10s ease-in-out infinite;
+}
+
+@keyframes animateGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero-image-box .robot-box {
+    width: 98.5%;
+    height: 98%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50px;
+}
+
+.hero-image-box .robot-box img {
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: hard-light;
+    opacity: 0.95; /* makes gradient influence stronger */
+}

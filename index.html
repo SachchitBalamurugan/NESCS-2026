@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Esports Championship 2026</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <img class="image-gradient" src="gradient.png" alt="gradient">
+    <div class="layer-blur"></div>
+
+    <div class="container">
+        <section class="hero-section">
+        <div class="hero-blur-wrapper">
+    <img class="hero-blur-img" src="hero blur img.png" alt="Hero Blur Background">
+    </div>
+
+        <header>
+            <h1 data-aos="fade-down" data-aos-duration="1500" class="logo">NESCS 2026</h1>
+<nav>
+    <a data-aos="fade-down" data-aos-duration="1500" href="index.html" class="nav-link">Home</a>
+    <a data-aos="fade-down" data-aos-duration="1800" href="teams.html" class="nav-link">Teams</a>
+    <a data-aos="fade-down" data-aos-duration="2100" href="schedule.html" class="nav-link">Schedule</a>
+    <a data-aos="fade-down" data-aos-duration="2400" href="tickets.html" class="nav-link">Tickets</a>
+    <a data-aos="fade-down" data-aos-duration="2700" href="watch.html" class="nav-link">Watch Live</a>
+</nav>
+
+
+            <button data-aos="fade-down" data-aos-duration="1500" class="btn-signin">Sign In</button>
+        </header>
+
+        <main>
+            <div data-aos="fade-zoom-in"
+             data-aos-easing="ease-in-back"
+             data-aos-delay="300"
+             data-aos-offset="0"
+             data-aos-duration="1500" 
+             class="content">
+
+            <div class="tag-box">
+                <div class="tag">May 6–10, 2026 · Nashville, TN</div>
+            </div>
+
+            <h1 data-aos="fade-zoom-in"
+             data-aos-easing="ease-in-back"
+             data-aos-delay="300"
+             data-aos-offset="0"
+             data-aos-duration="2000">
+                National Esports<br>Championship Series
+            </h1>
+
+            <p data-aos="fade-zoom-in"
+             data-aos-easing="ease-in-back"
+             data-aos-delay="300"
+             data-aos-offset="0"
+             data-aos-duration="2500"
+             class="description">
+                The top esports teams in the U.S. battle for national glory in Valorant,
+                Rocket League, and Super Smash Bros — live in the music city.
+            </p>
+
+            <div data-aos="fade-zoom-in"
+             data-aos-easing="ease-in-back"
+             data-aos-delay="300"
+             data-aos-offset="0"
+             data-aos-duration="3000"
+             class="buttons">
+                <a href="#" class="btn-get-started">Buy Tickets &gt;</a>
+                <a href="#" class="btn-signing-main">View Teams &gt;</a>
+            </div>
+        </div>
+        </main>
+
+        <spline-viewer 
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="300"
+            data-aos-offset="0"
+            data-aos-duration="3000"
+            class="robot-3d"
+            url="https://prod.spline.design/xX6h-eXVHB6h2SZD/scene.splinecode">
+        </spline-viewer>
+
+        <!-- *********************** -->
+        <!-- NEW SECTION BELOW HERO -->
+        <!-- *********************** -->
+
+        <!-- Games Featured -->
+        <section class="games-featured" data-aos="fade-up" data-aos-duration="2000">
+            <h2>Featuring Games</h2>
+            <div class="games-list">
+                 <div class="carousel-container">
+        <div class="carousel-list">
+            <div class="carousel-item" >
+                <img src="car1.png"/>
+            </div>
+            <div class="carousel-item">
+                <img src="car2.jpg"/>
+            </div>
+            <div class="carousel-item">
+                <img src="car3.jpg"/>
+            </div>
+        </div>
+
+        <div class="carousel-btn-Container">
+            <button class="carousel-btn" id="carousel-Left"> <i class="fa-solid fa-angle-left"></i> </button>
+            <button class="carousel-btn" id="carousel-right"> <i class="fa-solid fa-angle-right"></i> </button>
+        </div>
+            </div>
+            
+        </section>
+
+        <!-- Countdown Timer -->
+        <section data-aos="fade-up" data-aos-duration="2000">
+            <div id="countdown" class="countdown"></div>
+        </section>
+
+        <!-- Event Info Cards -->
+        <section class="info-section" data-aos="fade-up" data-aos-duration="2000">
+            <div class="info-card">
+                <h3>5 Days of Competition</h3>
+                <p>Experience intense matches and live entertainment.</p>
+            </div>
+            <div class="info-card">
+                <h3>Top National Teams</h3>
+                <p>A battle to become the U.S. esports champions.</p>
+            </div>
+            <div class="info-card">
+                <h3>Nashville, Tennessee</h3>
+                <p>Live from Music City at a premier esports venue.</p>
+            </div>
+        </section>
+
+
+
+       
+        
+    </div>
+    </section>
+    </div>
+
+    <!-- Countdown Script -->
+    <script>
+        const eventDate = new Date("May 6, 2026 00:00:00").getTime();
+        const timer = setInterval(() => {
+            const now = new Date().getTime();
+            const diff = eventDate - now;
+            if (diff <= 0) {
+                document.getElementById("countdown").innerHTML = "Event Live Now!";
+                clearInterval(timer);
+                return;
+            }
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            document.getElementById("countdown").innerHTML =
+                days + " Days Until Kickoff";
+        }, 1000);
+    </script>
+
+    <!-- Spline + AOS Libraries -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.6/build/spline-viewer.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
+<script>
+    const carouselItemEl = document.querySelectorAll(".carousel-item")
+console.log(carouselItemEl)
+
+const carouselLeftBtn = document.getElementById("carousel-Left")
+const carouselRightBtn =document.getElementById("carousel-right")
+
+let start = 0;
+const numImg = 3;
+
+const end = 100 * (numImg -1) ;
+
+let isAutoRender = true;
+
+carouselRightBtn.addEventListener("click",carouselRightSift)
+function carouselRightSift(){
+    isAutoRender = false;
+        console.log(start,end)
+    
+        if(start > -end ){
+            start=start-100;
+        }   
+        carouselItemEl.forEach(element =>{
+            element.style.transform = `translateX(${start}%)`
+        })
+}
+
+carouselLeftBtn.addEventListener("click",carouselLeftsift)
+function carouselLeftsift(){
+    isAutoRender = false;
+
+        console.log(start,end)
+        if(start <= -100 ){
+            start = start + 100;
+        }
+       
+        carouselItemEl.forEach(element =>{
+            element.style.transform = `translateX(${start}%)`
+        })
+}
+
+
+// const autoRender = ()=>{
+//     console.log(start,end)
+    
+//         if(start > -end ){
+//             carouselRightSift()
+//         }
+//         else{
+//             start = 0
+//             carouselLeftsift()
+//         } 
+        
+// }
+
+const autoRender = () => {
+    console.log(start, end);
+
+    // Wait 2 seconds (2000 ms) before moving
+    setTimeout(() => {
+        if (start > -end) {
+            carouselRightSift();
+        } else {
+            start = 0;
+            carouselLeftsift();
+        }
+    }, 5000); // change 2000 to any milliseconds you want
+};
+
+
+isAutoRender ? setInterval(autoRender,5000) : ""
+</script>
+</body>
+</html>
