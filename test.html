@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game Stream Banner</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #0a0014;
+    color: #fff;
+}
+.banner{
+    width: 100%;
+    height: 330px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 4rem;
+    background: radial-gradient(circle at top left, #a200ff44, #000 70%), #120021;
+    border-bottom: 3px solid #a020ff;
+    position: relative;
+    overflow: hidden;
+}
+.banner::after{
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    left: -10%;
+    width: 450px;
+    height: 450px;
+    background: #d47bff33;
+    filter: blur(80px);
+    border-radius: 50%;
+}
+.left{
+    z-index: 5;
+}
+.title{
+    font-size: 3.3rem;
+    font-weight: 800;
+    letter-spacing: 0.06rem;
+    text-shadow: 0 0 18px #d372ff88;
+}
+.subtitle{
+    margin-top: .4rem;
+    font-size: 1.1rem;
+    color: #d7b3ff;
+}
+.right{
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+}
+.time-box{
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    background: #1a0033;
+    border: 1px solid #9933ff;
+    padding: .6rem 1rem;
+    border-radius: 12px;
+}
+.subscribe-btn{
+    padding: .7rem 1.5rem;
+    background: #b020ff;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+.subscribe-btn:hover{
+    background: #d266ff;
+}
+.stream-image{
+    height: 190px;
+    width: auto;
+    border: 3px solid #b54bff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px #c26dff66;
+}
+@media (max-width: 820px){
+    .banner{
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    .right{
+        align-items: center;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="banner">
+
+    <div class="left">
+        <h1 class="title">NATIONAL ESPORTS 2026</h1>
+        <p class="subtitle">December 12–14 • Dallas, Texas • Live on Twitch</p>
+        <img class="stream-image" src="live/4.jpg" alt="gaming scene">
+    </div>
+
+    
+
+    <div class="right">
+        <p style="font-size:1.3rem; font-weight:600;">Top Players Attending</p>
+        <div class="players" style="display:flex; gap:1rem;">
+            <div class="player" style="text-align:center;">
+                <img src="https://via.placeholder.com/60" style="border-radius:50%; border:2px solid #b54bff;">
+                <span>RektX</span>
+            </div>
+            <div class="player" style="text-align:center;">
+                <img src="https://via.placeholder.com/60" style="border-radius:50%; border:2px solid #b54bff;">
+                <span>Nebula</span>
+            </div>
+            <div class="player" style="text-align:center;">
+                <img src="https://via.placeholder.com/60" style="border-radius:50%; border:2px solid #b54bff;">
+                <span>Cobalt</span>
+            </div>
+        </div>
+        <div class="sponsors" style="margin-top:1rem; display:flex; gap:1rem; opacity:0.8;">
+            <img src="https://via.placeholder.com/100x40?text=Intel" style="height:35px;">
+            <img src="https://via.placeholder.com/100x40?text=Razer" style="height:35px;">
+            <img src="https://via.placeholder.com/100x40?text=Prime+Drink" style="height:35px;">
+        </div>
+    </div>
+        <button class="subscribe-btn">SUBSCRIBE</button>
+    </div>
+
+</div>
+
+</body>
+</html>

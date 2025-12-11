@@ -1636,3 +1636,198 @@ main {
 .champ-btn:hover {
     background: #7c4df1;
 }
+
+
+.active-link {
+    color: #b77bff;
+    text-shadow: 0 0 10px #6c2aff;
+}
+
+.tickets-hero {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.tickets-hero h2 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.tickets-hero p {
+    color: #cfcfcf;
+    margin-top: .5rem;
+}
+
+.ticket-section {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 4rem 0;
+    flex-wrap: wrap;
+}
+
+.ticket-card {
+    width: 300px;
+    background: rgba(255,255,255,0.05);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid #2a2a2a;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    transition: .3s ease-in-out;
+}
+
+.ticket-card:hover {
+    transform: translateY(-10px);
+    border-color: #7f42a7;
+    box-shadow: 0 0 20px rgba(128,0,255,0.4);
+}
+
+.vip {
+    border: 2px solid #a020ff;
+}
+
+.badge-top {
+    background: linear-gradient(to right, #7f42a7, #6600c5);
+    padding: .4rem 1rem;
+    border-radius: 20px;
+    font-size: .8rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.ticket-price {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+.ticket-price span {
+    font-size: 1rem;
+    color: #b8b8b8;
+}
+
+.ticket-features {
+    list-style: none;
+    margin: 1rem 0 2rem 0;
+    color: #d1d1d1;
+}
+
+.ticket-features li {
+    margin: .4rem 0;
+}
+
+.btn-ticket-buy,
+.btn-ticket-buy-vip {
+    display: inline-block;
+    padding: .7rem 1.4rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: .2s;
+}
+
+.btn-ticket-buy {
+    border: 1px solid #5a5a5a;
+    color: #e7e7e7;
+}
+
+.btn-ticket-buy:hover {
+    background: #1a1a1a;
+}
+
+.btn-ticket-buy-vip {
+    background: #d2b2ff;
+    color: black;
+    font-weight: 600;
+}
+
+.btn-ticket-buy-vip:hover {
+    background: white;
+}
+
+.ticket-reminder {
+    margin: 5rem 0;
+}
+
+.reminder-box {
+    text-align: center;
+    padding: 2rem;
+}
+
+.btn-reminder {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: .8rem 2rem;
+    background: linear-gradient(to right, #7f42a7, #5500a0);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    transition: .2s;
+}
+
+.btn-reminder:hover {
+    opacity: .8;
+}
+
+
+.full-bg-section {
+    width: 100vw;
+    height: 100vh; /* Full screen height */
+    background-image: url("twitch.png"); /* CHANGE THIS */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+/* Optional: Dark overlay for visibility */
+/* .full-bg-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
+} */
+
+.full-bg-section .bg-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+
+.btn-watch-twitch {
+    padding: 14px 28px;
+    background: linear-gradient(90deg, #6A00FF, #9C00FF);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid #9C00FF;
+    transition: 0.3s ease;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    
+}
+
+.btn-watch-twitch:hover {
+    background: transparent;
+    color: #9C00FF;
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(156, 0, 255, 0.7);
+}
+
